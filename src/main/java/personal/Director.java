@@ -7,27 +7,27 @@ public class Director {
     private float estatura;
     private String nombre;
     private int curso;
-    private Boolean activo;
+    private Boolean jubilado;
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (!(o instanceof Director)) return false;
         Director director = (Director) o;
-        return getEdad() == director.getEdad() && Float.compare(director.getEstatura(), getEstatura()) == 0 && getCurso() == director.getCurso() && Objects.equals(getNombre(), director.getNombre()) && Objects.equals(getActivo(), director.getActivo());
+        return getEdad() == director.getEdad() && Float.compare(director.getEstatura(), getEstatura()) == 0 && getCurso() == director.getCurso() && Objects.equals(getNombre(), director.getNombre()) && Objects.equals(getJubilado(), director.getJubilado());
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(getEdad(), getEstatura(), getNombre(), getCurso(), getActivo());
+        return Objects.hash(getEdad(), getEstatura(), getNombre(), getCurso(), getJubilado());
     }
 
-    public Director(int edad, float estatura, String nombre, int curso, Boolean activo) {
+    public Director(int edad, float estatura, String nombre, int curso, Boolean jubilado) {
         this.edad = edad;
         this.estatura = estatura;
         this.nombre = nombre;
         this.curso = curso;
-        this.activo = activo;
+        this.jubilado = jubilado;
     }
 
     public int getEdad() {
@@ -62,11 +62,11 @@ public class Director {
         this.curso = curso;
     }
 
-    public Boolean getActivo() {
-        return activo;
+    public Boolean getJubilado() {
+        return jubilado;
     }
 
-    public void setActivo(Boolean activo) {
-        this.activo = activo;
+    public void setJubilado(Boolean jubilado) {
+        this.jubilado = jubilado;
     }
 }
