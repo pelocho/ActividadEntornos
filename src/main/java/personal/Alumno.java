@@ -7,7 +7,7 @@ public class Alumno {
     private float estatura;
     private String nombre;
     private int curso;
-    private Boolean graduado;
+    private int coeficiente;
 
     public void setEdad(int edad) {
         this.edad = edad;
@@ -22,12 +22,12 @@ public class Alumno {
         if (this == o) return true;
         if (!(o instanceof Alumno)) return false;
         Alumno alumno = (Alumno) o;
-        return getEdad() == alumno.getEdad() && Float.compare(alumno.getEstatura(), getEstatura()) == 0 && getCurso() == alumno.getCurso() && Objects.equals(getNombre(), alumno.getNombre()) && Objects.equals(getGraduado(), alumno.getGraduado());
+        return getEdad() == alumno.getEdad() && Float.compare(alumno.getEstatura(), getEstatura()) == 0 && getCurso() == alumno.getCurso() && Objects.equals(getNombre(), alumno.getNombre()) && Objects.equals(getCoeficiente(), alumno.getCoeficiente());
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(getEdad(), getEstatura(), getNombre(), getCurso(), getGraduado());
+        return Objects.hash(getEdad(), getEstatura(), getNombre(), getCurso(), getCoeficiente());
     }
 
     public void setNombre(String nombre) {
@@ -38,8 +38,8 @@ public class Alumno {
         this.curso = curso;
     }
 
-    public void setGraduado(Boolean graduado) {
-        this.graduado = graduado;
+    public void setCoeficiente(int coeficiente) {
+        this.coeficiente = coeficiente;
     }
 
     public int getEdad() {
@@ -58,15 +58,15 @@ public class Alumno {
         return curso;
     }
 
-    public Boolean getGraduado() {
-        return graduado;
+    public int getCoeficiente() {
+        return coeficiente;
     }
 
-    public Alumno(int edad, float estatura, String nombre, int curso, Boolean graduado) {
+    public Alumno(int edad, float estatura, String nombre, int curso, int coeficiente) {
         this.edad = edad;
         this.estatura = estatura;
         this.nombre = nombre;
         this.curso = curso;
-        this.graduado = graduado;
+        this.coeficiente = coeficiente;
     }
 }
