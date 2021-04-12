@@ -62,6 +62,16 @@ public class Alumno {
         return coeficiente;
     }
 
+    @Override
+    public String toString() {
+        return "Alumno -> " +
+                "edad=" + edad +
+                ", estatura=" + estatura +
+                ", nombre='" + nombre + '\'' +
+                ", curso=" + curso +
+                ", coeficiente=" + coeficiente;
+    }
+
     public Alumno(int edad, float estatura, String nombre, int curso, int coeficiente) {
         this.edad = edad;
         this.estatura = estatura;

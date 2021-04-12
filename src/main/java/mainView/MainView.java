@@ -8,6 +8,7 @@ import personal.Alumno;
 import personal.Director;
 import personal.Profesor;
 import seleccionarTipo.seleccionarTipoView;
+import visualizacion.visualizacionView;
 
 public class MainView {
 
@@ -29,17 +30,14 @@ public class MainView {
 
     public static void guardarAlumno(Alumno alumno) {
         personas.add(alumno);
-        System.out.println(personas);
     }
 
     public static void guardarProfesor(Profesor profesor) {
         personas.add(profesor);
-        System.out.println(personas);
     }
 
     public static void guardarDirector(Director director) {
         personas.add(director);
-        System.out.println(personas);
     }
 
 
@@ -66,5 +64,6 @@ public class MainView {
         frmMainView.getContentPane().add(btnVer);
 
         btnCrear.addActionListener(e -> seleccionarTipoView.main());
+        btnVer.addActionListener(e -> visualizacionView.main(personas));
     }
 }

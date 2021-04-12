@@ -22,6 +22,16 @@ public class Profesor {
         return Objects.hash(getEdad(), getEstatura(), getNombre(), getCurso(), getSueldo());
     }
 
+    @Override
+    public String toString() {
+        return "Profesor -> " +
+                "edad=" + edad +
+                ", estatura=" + estatura +
+                ", nombre='" + nombre + '\'' +
+                ", curso=" + curso +
+                ", sueldo=" + sueldo;
+    }
+
     public Profesor(int edad, float estatura, String nombre, int curso, int sueldo) {
         this.edad = edad;
         this.estatura = estatura;
