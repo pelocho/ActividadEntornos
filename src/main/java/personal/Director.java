@@ -66,6 +66,16 @@ public class Director {
         return sueldo;
     }
 
+    @Override
+    public String toString() {
+        return "Director -> " +
+                "edad=" + edad +
+                ", estatura=" + estatura +
+                ", nombre='" + nombre + '\'' +
+                ", curso=" + curso +
+                ", sueldo=" + sueldo;
+    }
+
     public void setSueldo(int sueldo) {
         this.sueldo = sueldo;
     }
