@@ -2,6 +2,8 @@ package mainView;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.util.ArrayList;
 
 import personal.Alumno;
@@ -63,7 +65,16 @@ public class MainView {
         btnVer.setBounds(181, 44, 128, 23);
         frmMainView.getContentPane().add(btnVer);
 
-        btnCrear.addActionListener(e -> seleccionarTipoView.main());
-        btnVer.addActionListener(e -> visualizacionView.main(personas));
+        btnCrear.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                seleccionarTipoView.main();
+            }
+        });
+
+        btnVer.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                visualizacionView.main(personas);
+            }
+        });
     }
 }

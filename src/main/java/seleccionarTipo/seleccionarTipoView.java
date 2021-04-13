@@ -2,6 +2,9 @@ package seleccionarTipo;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
 import creacionPersonas.crearAlumno;
 import creacionPersonas.crearProfesor;
 import creacionPersonas.crearDirector;
@@ -49,9 +52,23 @@ public class seleccionarTipoView {
         btnDirector.setBackground(Color.LIGHT_GRAY);
         btnDirector.setBounds(345, 44, 120, 23);
         frmSelectType.getContentPane().add(btnDirector);
-
-        btnAlumno.addActionListener(e -> crearAlumno.main());
-        btnProfesor.addActionListener(e -> crearProfesor.main());
-        btnDirector.addActionListener(e -> crearDirector.main());
+        
+        btnAlumno.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				crearAlumno.main();
+			}
+		});
+        
+        btnProfesor.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				crearProfesor.main();
+			}
+		});
+        
+        btnDirector.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				crearDirector.main();
+			}
+		});
     }
 }

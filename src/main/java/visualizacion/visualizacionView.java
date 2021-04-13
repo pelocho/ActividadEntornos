@@ -1,9 +1,5 @@
 package visualizacion;
 
-import creacionPersonas.crearAlumno;
-import creacionPersonas.crearDirector;
-import creacionPersonas.crearProfesor;
-
 import javax.swing.*;
 import java.awt.*;
 import java.util.ArrayList;
