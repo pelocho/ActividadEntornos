@@ -1,5 +1,3 @@
-package personal;
-
 import org.junit.jupiter.api.Test;
 import personal.Alumno;
 import personal.Director;
@@ -8,10 +6,10 @@ import personal.Profesor;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class ObjectTests {
+public class ObjectsTest {
 
     @Test
-    public void testAlumno() {
+    public void alumnoTest() {
         Alumno a = new Alumno(1, 1.70f, "Oscar", 1, 220);
         assertEquals(a.getEdad(), 1);
         assertEquals(a.getEstatura(), 1.70f);
@@ -21,7 +19,7 @@ public class ObjectTests {
     }
 
     @Test
-    public void testProfesor() {
+    public void profesorTest() {
         Profesor p = new Profesor(1, 1.70f, "Oscar", 1, 2200);
         Profesor p1 = new Profesor(1, 1.70f, "Oscar", 1, 2200);
         //Equals Method test
@@ -34,7 +32,7 @@ public class ObjectTests {
     }
 
     @Test
-    public void testDirector() {
+    public void directorTest() {
         Director d = new Director(1, 1.70f, "Oscar", 1, 2200);
         assertEquals(d.getEdad(), 1);
         assertEquals(d.getEstatura(), 1.70f);
